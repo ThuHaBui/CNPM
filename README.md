@@ -10,7 +10,7 @@
 # UI / UX prototype: here [Here](https://www.figma.com/file/c6yCGrvyCF7Zs1XvM89na6/Untitled?node-id=1%3A5)
 # Teck Stacks:
 - Front-end: ReactJs
-- Back-end:
-- Database:
+- Back-end: Javascript
+- Database: Firestore Database
 # Demo online: [link to website - update later]
 
