@@ -1,0 +1,39 @@
+.login{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    ::placeholder{
+        font-size: 20px;
+    }
+    .title{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    form{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input{
+            width: 400px;
+            height:50px;
+            margin: 10px;
+        }
+        button{
+            background-color: rgba(173, 184, 52, 0.675);
+            width: 200px;
+            height:30px;
+            border:none;
+            color:black;
+            font-weight: bold;
+        }
+        span{
+            font-size: 12;
+            color:red;
+            margin-top: 10px;
+        }
+
+    }
+    }

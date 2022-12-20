@@ -1,0 +1,33 @@
+.table{
+    .cellWrapper{
+        display: flex;
+        align-items: center;
+    }
+}
+.status{
+    padding:5px;
+    border-radius: 5px;
+
+    &.Yes{
+        color:green;
+        background-color: rgba(0,128,0,0.151);
+    }
+    &.No{
+        color:goldenrod;
+        background-color: rgba(189,189,3,0.103);
+    }
+}
+
+.status1{
+    padding:5px;
+    border-radius: 5px;
+
+    &.Approved{
+        color:green;
+        background-color: rgba(0,128,0,0.151);
+    }
+    &.Pending{
+        color:red;
+        background-color: rgba(232, 33, 33, 0.201);
+    }
+}
