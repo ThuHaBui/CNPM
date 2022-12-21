@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 .login{
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    img{
+        height: 100px;
+    }
+    .welcome{
+        font-size: 100px;
+        color:#98832a;
+        font-family: 'Lobster';
+    }
     ::placeholder{
         font-size: 20px;
     }
     .title{
-        font-size: 30px;
+        font-size: 20px;
         margin-bottom: 20px;
+        color:#98832a;
     }
     form{
         

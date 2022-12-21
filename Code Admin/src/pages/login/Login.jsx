@@ -4,6 +4,7 @@ import "./login.scss"
 import {auth} from "../../firebase"
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../components/context/AuthContext";
+
 const Login = () => {
   
   const [error,setError] = useState(false)
@@ -30,7 +31,10 @@ const Login = () => {
   return (
 
     <div className="login">
-          <div className="title">GOLDEN HOTEL ADMIN PAGE</div>
+      
+      <img src="https://img.icons8.com/plasticine/512/crown.png"/>
+          <div className="title">GOLDEN CENTURY</div>
+          <div className="welcome">WELCOME!</div>
       <form onSubmit={handleLogin}>
         <input type="email" placeholder="Email" onChange={e=>setEmail(e.target.value)}></input>
         <input type="password" placeholder="Password" onChange={e=>setPassword(e.target.value)}></input>

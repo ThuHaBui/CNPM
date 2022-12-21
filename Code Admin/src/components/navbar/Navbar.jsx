@@ -3,7 +3,6 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import "./navbar.scss"
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 function Navbar() {
   return (
     <div className="navbar">
@@ -14,19 +13,12 @@ function Navbar() {
         </div>
         <div className="items">
           <div className="item">
-            <LanguageOutlined className='icon'/>
-            English
-          </div>
-          <div className="item">
             <NotificationsNoneIcon className='icon'/>
             <div className='counter'></div>
           </div>
           <div className="item">
             <ChatBubbleOutlineIcon className='icon'/>
             <div className='counter'></div>
-          </div>
-          <div className="item">
-            <MonochromePhotos className='icon'/>
           </div>
           <div className="item">
             <img

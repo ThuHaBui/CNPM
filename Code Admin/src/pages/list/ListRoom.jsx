@@ -1,19 +1,20 @@
-import Datatable from "../../components/datatable/Datatable"
+
+import DatatableRoom from "../../components/datatable/datatableroom"
 import Navbar from "../../components/navbar/Navbar"
 import Sidebar from "../../components/sidebar/Sidebar"
 import "./list.scss"
 
-const List = ({columns}) => {
+const ListRoom = ({columns}) => {
   return (
     <div className="list">
       <Sidebar/>
       <div className="listContainer">
         <Navbar/>
-        <Datatable columns = {columns}/>
+        <DatatableRoom columns = {columns}/>
       </div>
 
     </div>
   )
 }
 
-export default List
+export default ListRoom

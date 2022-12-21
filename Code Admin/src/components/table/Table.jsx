@@ -62,12 +62,12 @@ const List = () => {
     <TableHead>
       <TableRow>
         <TableCell className='talbleCell'>ID</TableCell>
-        <TableCell className='talbleCell'>User ID</TableCell>
-        <TableCell className='talbleCell'>Reserve Date</TableCell>
-        <TableCell className='talbleCell'>Room ID</TableCell>
-        <TableCell className='talbleCell'>Amount</TableCell>
-        <TableCell className='talbleCell'>Payment Status</TableCell>
-        <TableCell className='talbleCell'>Check In Status</TableCell>
+        <TableCell className='talbleCell'>ID Người dùng</TableCell>
+        <TableCell className='talbleCell'>Ngày Đặt</TableCell>
+        <TableCell className='talbleCell'>ID Phòng</TableCell>
+        <TableCell className='talbleCell'>Tiền</TableCell>
+        <TableCell className='talbleCell'>Trạng thái thanh toán</TableCell>
+        <TableCell className='talbleCell'>Trạng thái nhận phòng</TableCell>
       </TableRow>
     </TableHead>
     <TableBody>

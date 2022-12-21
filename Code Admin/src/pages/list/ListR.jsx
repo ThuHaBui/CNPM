@@ -1,19 +1,20 @@
-import Datatable from "../../components/datatable/Datatable"
+
+import DatatableR from "../../components/datatable/DatatableRes"
 import Navbar from "../../components/navbar/Navbar"
 import Sidebar from "../../components/sidebar/Sidebar"
 import "./list.scss"
 
-const List = ({columns}) => {
+const ListR = ({columns}) => {
   return (
     <div className="list">
       <Sidebar/>
       <div className="listContainer">
         <Navbar/>
-        <Datatable columns = {columns}/>
+        <DatatableR columns = {columns}/>
       </div>
 
     </div>
   )
 }
 
-export default List
+export default ListR

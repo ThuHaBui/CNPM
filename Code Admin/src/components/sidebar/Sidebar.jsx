@@ -1,5 +1,6 @@
 import "./sidebar.scss"
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import MeetingRoomOutlinedIcon from '@mui/icons-material/MeetingRoomOutlined';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
@@ -26,6 +27,12 @@ const Sidebar = () => {
                     <span>Dashboard</span>
                 </li>
                 </Link>
+                <Link to="/rooms" style={{textDecoration:"none"}} >
+                <li>
+                    < MeetingRoomOutlinedIcon className="icon"/>
+                    <span>Quản lý phòng</span>
+                </li>
+                </Link>
                 <Link to="/reservations" style={{textDecoration:"none"}} >
                 <li>
                     <BedOutlinedIcon className="icon"/>
@@ -38,10 +45,12 @@ const Sidebar = () => {
                     <span>Quản lý thông tin khách hàng</span>
                 </li>
                 </Link>
+                <Link to="/roomservices" style={{textDecoration:"none"}} >
                 <li>
                     <RoomServiceIcon className="icon"/>
                     <span>Quản lý dịch vụ phòng</span>
                 </li>
+                </Link>
                 <p className = "title">USEFUL</p>
                 <li>
                     <AssessmentOutlinedIcon className="icon"/>

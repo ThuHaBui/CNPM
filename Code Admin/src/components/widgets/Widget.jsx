@@ -3,12 +3,9 @@ import './widget.scss'
 import CheckroomIcon from '@mui/icons-material/Checkroom';
 import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
 import LocalAtmOutlinedIcon from '@mui/icons-material/LocalAtmOutlined';
-import { useEffect, useState } from "react";
-import { collection, query, where, getDocs } from "firebase/firestore";
-import { db } from "../../firebase";
 const Widget = ({type}) => {
-  const [amount, setAmount] = useState(null);
-  const [diff, setDiff] = useState(null);
+  const amount = 100;
+  const diff = 20;
   let data;
   switch(type){
       case"customers":
@@ -16,7 +13,6 @@ const Widget = ({type}) => {
             title:"KHÁCH HÀNG",
             isMoney: false,
             link:"Xem thông tin khách hàng",
-            query:"customers",
             icon:(
               <PersonOutlineOutlined className='icon' style={{
                 color :'crimson',
@@ -68,35 +64,6 @@ const Widget = ({type}) => {
     default:
     break;
   }
-  useEffect(() => {
-    const fetchData = async () => {
-      const today = new Date();
-      const lastMonth = new Date(new Date().setMonth(today.getMonth() - 1));
-      const prevMonth = new Date(new Date().setMonth(today.getMonth() - 2));
-
-      const lastMonthQuery = query(
-        collection(db, data.query),
-        where("timeStamp", "<=", today),
-        where("timeStamp", ">", lastMonth)
-      );
-      const prevMonthQuery = query(
-        collection(db, data.query),
-        where("timeStamp", "<=", lastMonth),
-        where("timeStamp", ">", prevMonth)
-      );
-
-      const lastMonthData = await getDocs(lastMonthQuery);
-      const prevMonthData = await getDocs(prevMonthQuery);
-
-      setAmount(lastMonthData.docs.length);
-      setDiff(
-        ((lastMonthData.docs.length - prevMonthData.docs.length) / prevMonthData.docs.length) *
-          100
-      );
-    };
-    fetchData();
-  }, []);
-
   return (
     <div className="widget">
       <div className="left">
@@ -109,7 +76,7 @@ const Widget = ({type}) => {
       <div className="right">
         <div className={`percentage ${diff < 0 ? "negative" : "positive"}`}>
           {diff < 0 ? <KeyboardArrowDownOutlined/> : <KeyboardArrowUpOutlined/> }
-          {diff} %
+          {diff} %  
         </div>
         {data.icon}
       </div>
